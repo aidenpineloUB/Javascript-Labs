@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problem 15: Create List Items</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f2f5;
+      padding: 40px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .instructions {
+      background: #e3f2fd;
+      border-left: 4px solid #2196f3;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 4px;
+    }
+    .instructions h2 {
+      color: #1976d2;
+      margin-bottom: 10px;
+    }
+    .instructions p {
+      color: #555;
+      line-height: 1.6;
+    }
+    code {
+      background: #e8e8e8;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+      color: #e74c3c;
+    }
+    .hint {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 4px;
+    }
+    #todoList {
+      background: #ecf0f1;
+      padding: 20px;
+      border-radius: 8px;
+      min-height: 100px;
+    }
+    #todoList li {
+      padding: 10px;
+      margin: 10px 0;
+      background: white;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="instructions">
+      <h2>Problem 15: Create List Items</h2>
+      <p>Create 3 new list items with text "Item 1", "Item 2", and "Item 3". Append all of them to the ul with id <code>todoList</code></p>
+      <div class="hint">
+        💡 <strong>Hint:</strong> Create three separate <code>&lt;li&gt;</code> elements and append each one
+      </div>
+    </div>
+
+    <!-- HTML for this problem -->
+    <ul id="todoList"></ul>
+  </div>
+
+  <script>
+    // Write your JavaScript code here
+    const todoList = document.querySelector('#todoList');
+    const li1 = document.createElement('li');
+    li1.textContent = 'Item 1';
+    todoList.appendChild(li1);
+    
+    const li2 = document.createElement('li');
+    li2.textContent = 'Item 2';
+    todoList.appendChild(li2);
+    
+    const li3 = document.createElement('li');
+    li3.textContent = 'Item 3';
+    todoList.appendChild(li3);
+  </script>
+</body>
+</html>
