@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DOM Selection Worksheet: getElementById & querySelector</title>
+  <style>
+    :root { font-family: system-ui, Arial, sans-serif; }
+    body { max-width: 920px; margin: 2rem auto; line-height: 1.4; }
+    h1, h2 { margin: 0.5rem 0 0.25rem; }
+    section { border: 1px solid #ddd; padding: 1rem; border-radius: 8px; margin: 1rem 0; }
+    code { background: #f6f8fa; padding: 0.1rem 0.3rem; border-radius: 4px; }
+    .note { color: #555; font-size: 0.95rem; }
+    .highlight { background: yellow; }
+    .warning { color: #a30000; font-weight: 700; }
+    .muted { opacity: 0.6; }
+    .hidden { display: none; }
+    .card { border: 1px solid #ccc; padding: 0.75rem; border-radius: 8px; margin: 0.5rem 0; }
+    .tag { display: inline-block; padding: 0.1rem 0.4rem; border-radius: 4px; background: #eef; margin-right: 0.25rem; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+    .product { border: 1px solid #ddd; padding: 0.75rem; border-radius: 8px; }
+    .product h3 { margin: 0 0 0.25rem; font-size: 1rem; }
+    .small { font-size: 0.9rem; }
+    .ok { color: #0a7a00; font-weight: 700; }
+    .out { color: #a30000; font-weight: 700; }
+    .divider { height: 1px; background: #eee; margin: 0.75rem 0; }
+  </style>
+</head>
+<body>
+  <h1>DOM Selection Worksheet</h1>
+  <p class="note">
+    Use only <code>document.getElementById()</code> and <code>document.querySelector()</code>.  
+    For each exercise, follow the instructions inside <code>&lt;script defer&gt;</code>.  
+    Tip: If an element might be missing, guard with <code>if (!el) console.error(...)</code>.
+  </p>
+
+  <!-- EXERCISE 1 -->
+  <section id="ex1">
+    <h2>Exercise 1: Select by ID (getElementById)</h2>
+    <p id="welcome">Welcome message goes here.</p>
+    <p class="note">Goal: change #welcome text to "Hello, DOM!".</p>
+  </section>
+
+  <!-- EXERCISE 2 -->
+  <section id="ex2">
+    <h2>Exercise 2: Select first match (querySelector)</h2>
+    <div class="card">
+      <p class="note">Only the FIRST <code>.note</code> should become highlighted.</p>
+      <p class="note">I am the first note.</p>
+      <p class="note">I am the second note.</p>
+    </div>
+  </section>
+
+  <!-- EXERCISE 3 -->
+  <section id="ex3">
+    <h2>Exercise 3: Nested selection (descendant selector)</h2>
+    <div class="card" id="profile">
+      <h3>Student Profile</h3>
+      <p class="label">Name:</p>
+      <p class="value" id="studentName">—</p>
+      <div class="divider"></div>
+      <p class="label">Program:</p>
+      <p class="value">Computer Science</p>
+    </div>
+    <p class="note">Goal: using <code>#profile .value</code>, set the FIRST value to "Ari".</p>
+  </section>
+
+  <!-- EXERCISE 4 -->
+  <section id="ex4">
+    <h2>Exercise 4: Attribute selector</h2>
+    <p class="note">Goal: Select the link with <code>data-test="syllabus"</code> and set its <code>href</code> to <code>"/docs/syllabus.pdf"</code>.</p>
+    <a class="tag" data-test="syllabus" href="#">Syllabus</a>
+    <a class="tag" data-test="rubric" href="#">Rubric</a>
+  </section>
+
+  <!-- EXERCISE 5 -->
+  <section id="ex5">
+    <h2>Exercise 5: ID vs Class (choose the right tool)</h2>
+    <div id="statusLine" class="small muted">Status: pending…</div>
+    <p class="note">Goal: make #statusLine read "Status: ready" and remove the <code>muted</code> class.</p>
+  </section>
+
+  <!-- EXERCISE 6 -->
+  <section id="ex6">
+    <h2>Exercise 6: Structured selector</h2>
+    <div class="card">
+      <p class="note">Goal: Select the strong label inside the <em>second</em> list item and make it red.</p>
+      <ul>
+        <li><strong class="label">Username:</strong> <span>guest</span></li>
+        <li><strong class="label">Role:</strong> <span>viewer</span></li>
+        <li><strong class="label">Active:</strong> <span>yes</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EXERCISE 7 -->
+  <section id="ex7">
+    <h2>Exercise 7: First product only (querySelector returns first match)</h2>
+    <div class="grid">
+      <div class="product">
+        <h3 class="name">Notebook</h3>
+        <div class="stock ok">In Stock</div>
+      </div>
+      <div class="product">
+        <h3 class="name">Pencil</h3>
+        <div class="stock out">Out of Stock</div>
+      </div>
+      <div class="product">
+        <h3 class="name">Eraser</h3>
+        <div class="stock ok">In Stock</div>
+      </div>
+    </div>
+    <p class="note">Goal: Using a selector, pick the FIRST <code>.product .name</code> and append " (Featured)".</p>
+  </section>
+
+  <!-- EXERCISE 8 -->
+  <section id="ex8">
+    <h2>Exercise 8: Reading then writing</h2>
+    <p class="note">Goal: Read the text from <code>#sourceText</code> and copy it into <code>#targetText</code>.</p>
+    <div class="card">
+      <p id="sourceText">Belize Bites</p>
+      <p id="targetText">—</p>
+    </div>
+  </section>
+
+  <script defer>
+    /**********************************************
+     * DOM Selection Worksheet
+     * Use ONLY:
+     *   - document.getElementById("<id>")
+     *   - document.querySelector("<css-selector>")
+     * Fill in each TODO. Run and verify visually or via console.
+     **********************************************/
+
+    // ===== EXERCISE 1 =====
+    // Goal: change #welcome text to "Hello, DOM!" using getElementById.
+    const welcome = document.getElementById("welcome");
+    
+    if (!welcome) console.error("EX1: #welcome not found");
+    else { welcome.textContent = "Hello, DOM!"; }
+
+    // ===== EXERCISE 2 =====
+    // Goal: Using querySelector(".note"), select ONLY the first .note and add 'highlight' class.
+    const firstNote = document.querySelector(".note");
+    if (!firstNote) console.error("EX2: first .note not found");
+    else { firstNote.classList.add('highlight'); }
+
+    // ===== EXERCISE 3 =====
+    // Goal: Using querySelector("#profile .value"), set the first value to "Ari".
+    const firstValue = document.querySelector("#profile .value");
+    if (!firstValue) console.error("EX3: #profile .value not found");
+    else { firstValue.textContent = "Ari"; }
+
+    // ===== EXERCISE 4 =====
+    // Goal: Select the link with data-test="syllabus" and set href to "/docs/syllabus.pdf".
+    // Hint: Attribute selector syntax: a[data-test="syllabus"]
+    const syllabusLink = document.querySelector('a[data-test="syllabus"]');
+    if (!syllabusLink) console.error("EX4: syllabus link not found");
+    else { syllabusLink.setAttribute('href', '/docs/syllabus.pdf'); }
+
+    // ===== EXERCISE 5 =====
+    // Goal: Use getElementById to update #statusLine text to "Status: ready" and remove class 'muted'.
+    const statusLine = document.getElementById("statusLine");
+    if (!statusLine) console.error("EX5: #statusLine not found");
+    else {
+      statusLine.textContent = "Status: ready";
+      statusLine.classList.remove('muted');
+    }
+
+    // ===== EXERCISE 6 =====
+    // Goal: Select the strong.label inside the SECOND list item and make it red.
+    // Hint: Use :nth-child(2) then a descendant selector for strong.label.
+    const secondStrong = document.querySelector("li:nth-child(2) strong.label");
+    if (!secondStrong) console.error("EX6: second strong.label not found");
+    else { secondStrong.style.color = 'red'; }
+
+    // ===== EXERCISE 7 =====
+    // Goal: Select the FIRST product name and append " (Featured)".
+    // Hint: ".product .name" matches names; querySelector returns the first match.
+    const firstProductName = document.querySelector(".product .name");
+    if (!firstProductName) console.error("EX7: first product name not found");
+    else { firstProductName.textContent += " (Featured)"; }
+
+    // ===== EXERCISE 8 =====
+    // Goal: Read text from #sourceText and copy it into #targetText.
+    const src = document.getElementById("sourceText");
+    const dst = document.getElementById("targetText");
+    if (!src || !dst) console.error("EX8: source or target not found");
+    else { dst.textContent = src.textContent; }
+
+    /*************************************************
+     * Instructor Notes (optional to show students):
+     * - Prefer clear guard checks before usage.
+     * - Use getElementById for unique, known elements.
+     * - Use querySelector for flexible CSS-based targeting.
+     * - querySelector returns the FIRST match only.
+     *************************************************/
+  </script>
+</body>
+</html>
