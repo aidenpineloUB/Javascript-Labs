@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="parent" style="padding: 30px; background: lightblue">
+      PARENT
+      <div
+        id="child"
+        style="padding: 20px; background: lightcoral; margin: 10px"
+      >
+        CHILD
+        <button id="grandchild">Click Me</button>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("parent").addEventListener("click", () => {
+        console.log("Parent handled click");
+      });
+
+      document.getElementById("child").addEventListener("click", () => {
+        console.log("Child handled click");
+      });
+
+      document.getElementById("grandchild").addEventListener("click", (e) => {
+        console.log("Button handled click");
+        //e.stopPropagation(); // ← Uncomment to stop bubbling!
+      });
+    </script>
+  </body>
+</html>

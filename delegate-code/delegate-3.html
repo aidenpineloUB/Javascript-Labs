@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>With Event Delegation</title>
+    <style>
+      .grid {
+        display: flex;
+        gap: 10px;
+      }
+      .card {
+        width: 100px;
+        height: 100px;
+        background-color: lightgray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 8px;
+      }
+      .selected {
+        background-color: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>✅ With Event Delegation</h2>
+    <div class="grid" id="gridB">
+      <div class="card" id="card1">Card 1</div>
+      <div class="card" id="card2">Card 2</div>
+    </div>
+    <button id="addCardB">Add a Third Card</button>
+
+    <script>
+      const gridB = document.getElementById("gridB");
+
+      // One listener handles all cards
+      gridB.addEventListener("click", (e) => {
+        if (e.target.classList.contains("card")) {
+          e.target.classList.toggle("selected");
+          console.log("Clicked:", e.target.id);
+        }
+      });
+
+      // Add a new card dynamically
+      document.getElementById("addCardB").addEventListener("click", () => {
+        const count = gridB.children.length + 1;
+        gridB.innerHTML += `<div class="card" id="card${count}">Card ${count}</div>`;
+        console.log(`Added Card ${count} — and it works!`);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubbles | DOM</title>
+  </head>
+  <body>
+    <div>
+      <p>
+        If you click on this <em>p</em>, the event handler on the parent
+        <code>DIV</code> will run
+      </p>
+    </div>
+    <script>
+      const bubbles = document.querySelector("div");
+      bubbles.addEventListener("click", () => {
+        alert("This is the parent element");
+      });
+    </script>
+  </body>
+</html>

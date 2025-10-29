@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+     <button id="btn">Button 1</button>
+   <script>
+        const btn = document.querySelector('#btn');
+        // capture phase
+        btn.addEventListener('click', e, true);
+        // bubbling phase (default)
+        btn.addEventListener('click', e, false); 
+        function e() { 
+                console.log(`Phase: ${e.eventPhase} - I was clicked`);
+        }
+   </script>             
+  </body>
+</html>
+
+  </body>
+</html>

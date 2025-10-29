@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Without Event Delegation (Fixed)</title>
+    <style>
+      .grid {
+        display: flex;
+        gap: 10px;
+      }
+      .card {
+        width: 100px;
+        height: 100px;
+        background-color: lightgray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 8px;
+        transition: background-color 120ms ease, outline 120ms ease;
+      }
+      /* Stronger selector to reliably override .card */
+      .card.selected {
+        background-color: lightgreen;
+        outline: 2px solid #2e7d32; /* extra visual cue */
+      }
+    </style>
+  </head>
+  <body>
+    <h2>❌ Without Event Delegation</h2>
+    <div class="grid" id="gridA">
+      <div class="card" id="card1">Card 1</div>
+      <div class="card" id="card2">Card 2</div>
+    </div>
+    <button id="addCardA">Add a Third Card</button>
+
+    <script>
+      const card1 = document.getElementById("card1");
+      const card2 = document.getElementById("card2");
+      const gridA = document.getElementById("gridA");
+
+      function toggle(card) {
+        card.classList.toggle("selected");
+        card.textContent = card.classList.contains("selected")
+          ? "✓"
+          : card.id.replace("card", "Card ");
+        console.log("Clicked:", card.id);
+      }
+
+      // Individual listeners
+      card1.addEventListener("click", () => toggle(card1));
+      card2.addEventListener("click", () => toggle(card2));
+
+      // Add a new card dynamically (won't have a listener in non-delegation)
+      document.getElementById("addCardA").addEventListener("click", () => {
+        const id = "card3";
+        gridA.insertAdjacentHTML(
+          "beforeend",
+          `<div class="card" id="${id}">Card 3</div>`
+        );
+        console.log("Added Card 3 (but it won’t respond to clicks!)");
+      });
+    </script>
+  </body>
+</html>

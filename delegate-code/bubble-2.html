@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body * {
+        margin: 10px;
+        border: 1px solid rgb(129, 0, 45);
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubbles | DOM</title>
+  </head>
+  <body>
+    <div id="od">
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+    </div>
+    <script>
+      const body = document.querySelector("body");
+      body.addEventListener("click", (e) => {
+        e.target.style.backgroundColor = "green";
+      });
+
+
+      // const outerDiv = document.querySelector("#od");
+      // outerDiv.addEventListener("click", () => {
+      //   alert("This is the outer div");
+      // });
+
+      // const innerDiv = document.querySelector("#id");
+      // innerDiv.addEventListener("click", () => {
+      //   alert("This is the inner div");
+      // });
+
+      // const p = document.querySelector("p");
+      // p.addEventListener("click", () => {
+      //   alert("This is the p");
+      // });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Event Delegation Example</title>
+    <style>
+      .grid {
+        display: flex;
+        gap: 10px;
+      }
+      .card {
+        width: 100px;
+        height: 100px;
+        background-color: lightgray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 8px;
+      }
+      .selected {
+        background-color: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid" id="cardGrid">
+      <div class="card" id="card1">Card 1</div>
+      <div class="card" id="card2">Card 2</div>
+    </div>
+
+    <script>
+      // Parent element
+      const grid = document.getElementById("cardGrid");
+
+      // One event listener handles both cards
+      grid.addEventListener("click", (e) => {
+        // Check if the clicked element has the 'card' class
+        if (e.target.classList.contains("card")) {
+          // Toggle a visual effect on the clicked card
+          e.target.classList.toggle("selected");
+          console.log("You clicked:", e.target.id);
+        }
+      });
+    </script>
+  </body>
+</html>
