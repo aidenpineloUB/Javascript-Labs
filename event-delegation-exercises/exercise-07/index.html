@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 7: Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Exercise 7: Form Validation</h1>
+        <p class="instructions">
+            <strong>Goal:</strong> Validate form inputs as users type using event delegation.<br>
+            Listen for 'input' events on the form container, not individual inputs.
+        </p>
+        
+        <form id="user-form" class="form">
+            <div class="form-group">
+                <label>Username (min 5 characters)</label>
+                <input type="text" name="username" class="form-input" data-min-length="5">
+                <span class="error-message"></span>
+            </div>
+            
+            <div class="form-group">
+                <label>Email (must contain @)</label>
+                <input type="email" name="email" class="form-input">
+                <span class="error-message"></span>
+            </div>
+            
+            <div class="form-group">
+                <label>Password (min 8 characters)</label>
+                <input type="password" name="password" class="form-input" data-min-length="8">
+                <span class="error-message"></span>
+            </div>
+            
+            <button type="submit" id="submit-btn" disabled>Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

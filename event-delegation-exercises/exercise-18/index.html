@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>Ex 18: Kanban Board</title>
+<link rel="stylesheet" href="style.css"></head><body>
+<div class="container"><h1>Exercise 18: Simple Kanban Board</h1>
+<p class="instructions"><strong>Goal:</strong> Move cards between columns using buttons.</p>
+<div class="board">
+<div class="column" data-status="todo">
+<h2>To Do</h2>
+<div class="cards">
+<div class="card" data-id="1"><p>Task 1</p>
+<button class="move-btn" data-direction="right">→</button></div>
+<div class="card" data-id="2"><p>Task 2</p>
+<button class="move-btn" data-direction="right">→</button></div>
+</div></div>
+<div class="column" data-status="in-progress">
+<h2>In Progress</h2>
+<div class="cards">
+<div class="card" data-id="3"><p>Task 3</p>
+<button class="move-btn" data-direction="left">←</button>
+<button class="move-btn" data-direction="right">→</button></div>
+</div></div>
+<div class="column" data-status="done">
+<h2>Done</h2>
+<div class="cards">
+<button class="move-btn" data-direction="left">←</button>
+</div></div>
+</div></div><script src="script.js"></script></body></html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation Exercises - Complete Set</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+        
+        .intro {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .intro h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .intro p {
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .section-header h2 {
+            margin-bottom: 5px;
+        }
+        
+        .section-header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .exercise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .exercise-card {
+            background: #f8f9fa;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .exercise-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border-color: #667eea;
+        }
+        
+        .exercise-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .exercise-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .exercise-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        
+        .exercise-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .exercise-link:hover {
+            background: #5568d3;
+        }
+        
+        .progress-note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        
+        .progress-note h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .progress-note p {
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Event Delegation Exercises</h1>
+        <p class="subtitle">20 Progressive Exercises to Master Event Delegation in JavaScript</p>
+        
+        <div class="intro">
+            <h2>Welcome, Students! 👋</h2>
+            <p><strong>Goal:</strong> Master the event delegation pattern through hands-on practice.</p>
+            <p><strong>Time:</strong> 3-4 hours total (at a leisurely pace)</p>
+            <p><strong>Approach:</strong> Start from Exercise 1 and work your way up. Each exercise builds on previous concepts.</p>
+            <p><strong>Tips:</strong> Read instructions carefully, use the hints in comments, test frequently, and only check solutions when truly stuck!</p>
+        </div>
+        
+        <!-- Beginner Section -->
+        <div class="section">
+            <div class="section-header">
+                <h2>🌱 Beginner Level (Exercises 1-7)</h2>
+                <p>Foundation concepts - Single listeners, basic interactions, data attributes</p>
+            </div>
+            
+            <div class="exercise-grid">
+                <div class="exercise-card">
+                    <span class="exercise-number">Exercise 1</span>
+                    <h3 class="exercise-title">Click Counter</h3>
+                    <p class="exercise-description">Count button clicks using a single event listener</p>
+                    <a href="exercise-01/index.html" class="exercise-link">Start Exercise →</a>
+                </div>
+                
+                <div class="exercise-card">
+                    <span class="exercise-number">Exercise 2</span>
+                    <h3 class="exercise-title">Color Selector</h3>
+                    <p class="exercise-description">Change colors using data attributes</p>
+                    <a href="exercise-02/index.html" class="exercise-link">Start Exercise →</a>
+                </div>
+                
+                <div class="exercise-card">
+                    <span class="exercise-number">Exercise 3</span>
+                    <h3 class="exercise-title">Delete Items</h3>
+                    <p class="exercise-description">Remove list items with event delegation</p>
+                    <a href="exercise-03/index.html" class="exercise-link">Start Exercise →</a>
+                </div>
+                
+                <div class="exercise-card">
+                    <span class="exercise-number">Exercise 4</span>
+                    <h3 class="exercise-title">Toggle Active State</h3>
+                    <p class="exercise-description">Toggle classes on cards dynamically</p>
+                    <a href="exercise-04/index.html" class="exercise-link">Start Exercise →</a>
+                </div>
+                
+                <div class="exercise-card">
+                    <span class="exercise-number">Exercise 5</span>
+                    <h3 class="exercise-title">Add Items Dynamically</h3>
+                    <p class="exercise-description">Add and delete items that work automatically</p>
+                    <a href="exercise-05/index.html" class="exercise-link">Start Exercise →</a>
+                </div>
+                
+                <div class="exercise-card">
+                    <span class="exercise-number">Exercise 6</span>
+                    <h3 class="exercise-title">Multiple Button Types</h3>
+                    <p class="exercise-description">Handle like, edit, and delete actions</p>
+                    <a href="exercise-06/index.html" class="exercise-link">Start Exercise →</a>
+                </div>
+                
+                <div class="exercise-card">
+                    <span class="exercise-number">Exercise 7</span>
+                    <h3 class="exercise-title">Form Validation</h3>
+                    <p class="exercise-description">Real-time validation with input events</p>
+                    <a href="exercise-07/index.html" class="exercise-link">Start Exercise →</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Intermediate Section -->
+        <div class="section">
+            <div class="section-header">
+                <h2>🚀 Intermediate Level (Exercises 8-14)</h2>
+                <p>Multiple event types, data management, coordinating components</p>
+            </div>
+            
+            <div class="exercise-grid">
+                <div class="exercise-card">
+                    <span class="exercise-number">Exercise 8</span>
+                    <h3 class="exercise-title">Tab Navigation</h3>
+                    <p class="exercise-description">Switch between content tabs</p>
+                    <a href="exercise-08/index.html" class="exercise-link">Start Exercise →</a>
+                </div>
+                
+                <div class="exercise-card">
+                    <span class="exercise-number">Exercise 9</span>
+                    <h3 class="exercise-title">Shopping Cart</h3>
+                    <p class="exercise-description">Manage cart with quantities and totals</p>
+                    <a href="exercise-09/index.html" class="exercise-link">Start Exercise →</a>
+                </div>
+                
+                <div class="exercise-card">
+                    <span class="exercise-number">Exercise 10</span>
+                    <h3 class="exercise-title">Image Gallery</h3>
+                    <p class="exercise-description">Click thumbnails to change main image</p>
+                    <a href="exercise-10/index.html" class="exercise-link">Start Exercise →</a>
+                </div>
+                
+                <div class="exercise-card">
+                    <span class="exercise-number">Exercise 11</span>
+                    <h3 class="exercise-title">Todo with Categories</h3>
+                    <p class="exercise-description">Organize todos in multiple categories</p>
+                    <a href="exercise-11/index.html" class="exercise-link">Start Exercise →</a>
+                </div>
+                
+                <div class="exercise-card">
+                    <span class="exercise-number">Exercise 12</span>
+                    <h3 class="exercise-title">Star Rating</h3>
+                    <p class="exercise-description">Interactive rating with hover preview</p>
+                    <a href="exercise-12/index.html" class="exercise-link">Start Exercise →</a>
+                </div>
+                
+                <div class="exercise-card">
+                    <span class="exercise-number">Exercise 13</span>
+                    <h3 class="exercise-title">Accordion Menu</h3>
+                    <p class="exercise-description">Expand/collapse sections</p>
+                    <a href="exercise-13/index.html" class="exercise-link">Start Exercise →</a>
+                </div>
+                
+                <div class="exercise-card">
+                    <span class="exercise-number">Exercise 14</span>
+                    <h3 class="exercise-title">Sortable Table</h3>
+                    <p class="exercise-description">Sort table by clicking headers</p>
+                    <a href="exercise-14/index.html" class="exercise-link">Start Exercise →</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Advanced Section -->
+        <div class="section">
+            <div class="section-header">
+                <h2>⚡ Advanced Level (Exercises 15-20)</h2>
+                <p>Complex interactions, game logic, state management preparation</p>
+            </div>
+            
+            <div class="exercise-grid">
+                <div class="exercise-card">
+                    <span class="exercise-number">Exercise 15</span>
+                    <h3 class="exercise-title">Modal System</h3>
+                    <p class="exercise-description">Open/close modals with backdrop clicks</p>
+                    <a href="exercise-15/index.html" class="exercise-link">Start Exercise →</a>
+                </div>
+                
+                <div class="exercise-card">
+                    <span class="exercise-number">Exercise 16</span>
+                    <h3 class="exercise-title">Click Tracker</h3>
+                    <p class="exercise-description">Track clicks across multiple elements</p>
+                    <a href="exercise-16/index.html" class="exercise-link">Start Exercise →</a>
+                </div>
+                
+                <div class="exercise-card">
+                    <span class="exercise-number">Exercise 17</span>
+                    <h3 class="exercise-title">Quiz Application</h3>
+                    <p class="exercise-description">Multi-question quiz with scoring</p>
+                    <a href="exercise-17/index.html" class="exercise-link">Start Exercise →</a>
+                </div>
+                
+                <div class="exercise-card">
+                    <span class="exercise-number">Exercise 18</span>
+                    <h3 class="exercise-title">Kanban Board</h3>
+                    <p class="exercise-description">Move tasks between status columns</p>
+                    <a href="exercise-18/index.html" class="exercise-link">Start Exercise →</a>
+                </div>
+                
+                <div class="exercise-card">
+                    <span class="exercise-number">Exercise 19</span>
+                    <h3 class="exercise-title">Color Matching Prototype</h3>
+                    <p class="exercise-description">Match color pairs - game mechanics intro</p>
+                    <a href="exercise-19/index.html" class="exercise-link">Start Exercise →</a>
+                </div>
+                
+                <div class="exercise-card">
+                    <span class="exercise-number">Exercise 20</span>
+                    <h3 class="exercise-title">Memory Card Game</h3>
+                    <p class="exercise-description">⭐ FINAL CHALLENGE - Complete memory game!</p>
+                    <a href="exercise-20/index.html" class="exercise-link">Start Exercise →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="progress-note">
+            <h3>📊 Track Your Progress</h3>
+            <p>Complete all 20 exercises to master event delegation and prepare for state management concepts. After finishing, you'll be ready to build complex, interactive applications!</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 12: Star Rating</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Exercise 12: Star Rating System</h1>
+        <p class="instructions">
+            <strong>Goal:</strong> Create a star rating system with hover preview.<br>
+            Use event delegation to handle clicks and hover on stars.
+        </p>
+        
+        <div class="rating-items">
+            <div class="rating-item">
+                <h3>Product A</h3>
+                <div class="stars" data-product="product-a">
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                </div>
+                <p class="rating-text">Rating: <span class="rating-value">0</span>/5</p>
+            </div>
+            
+            <div class="rating-item">
+                <h3>Product B</h3>
+                <div class="stars" data-product="product-b">
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                </div>
+                <p class="rating-text">Rating: <span class="rating-value">0</span>/5</p>
+            </div>
+            
+            <div class="rating-item">
+                <h3>Product C</h3>
+                <div class="stars" data-product="product-c">
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                </div>
+                <p class="rating-text">Rating: <span class="rating-value">0</span>/5</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

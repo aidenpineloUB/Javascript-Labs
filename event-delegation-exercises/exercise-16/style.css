@@ -1,0 +1,9 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial; background: linear-gradient(135deg, #84fab0, #8fd3f4); padding: 40px 20px; }
+.container { max-width: 600px; margin: 0 auto; background: white; border-radius: 12px; padding: 40px; }
+h1 { text-align: center; margin-bottom: 20px; }
+.instructions { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #84fab0; }
+#stats { text-align: center; font-size: 20px; font-weight: bold; margin-bottom: 20px; }
+.box-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+.box { aspect-ratio: 1; background: #84fab0; border-radius: 12px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 32px; font-weight: bold; color: white; transition: all 0.3s; }
+.box:hover { transform: scale(1.05); background: #6ee09a; }

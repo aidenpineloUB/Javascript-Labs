@@ -1,0 +1,16 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial; background: linear-gradient(135deg, #fa709a, #fee140); padding: 40px 20px; }
+.container { max-width: 600px; margin: 0 auto; background: white; border-radius: 12px; padding: 40px; }
+h1 { text-align: center; margin-bottom: 20px; }
+.instructions { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #fa709a; }
+#stats { text-align: center; font-size: 20px; font-weight: bold; margin-bottom: 20px; }
+.card-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 20px; }
+.game-card { aspect-ratio: 1; background: #ddd; border-radius: 12px; cursor: pointer; transition: all 0.3s; }
+.game-card:hover { transform: scale(1.05); }
+.game-card.revealed { cursor: default; }
+.game-card.revealed[data-color="red"] { background: #ff6b6b; }
+.game-card.revealed[data-color="blue"] { background: #4ecdc4; }
+.game-card.revealed[data-color="green"] { background: #45b7d1; }
+.game-card.revealed[data-color="yellow"] { background: #f7dc6f; }
+.game-card.matched { background: #95e1d3; pointer-events: none; }
+#reset-btn { display: block; margin: 0 auto; padding: 12px 30px; background: #fa709a; color: white; border: none; border-radius: 8px; cursor: pointer; }

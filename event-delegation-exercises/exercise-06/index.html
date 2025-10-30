@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 6: Multiple Button Types</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Exercise 6: Multiple Button Types</h1>
+        <p class="instructions">
+            <strong>Goal:</strong> Handle different button actions (like, edit, delete) with ONE event listener.<br>
+            Count how many times each action is performed.
+        </p>
+        
+        <div class="stats">
+            <div class="stat">Likes: <span id="like-count">0</span></div>
+            <div class="stat">Edits: <span id="edit-count">0</span></div>
+            <div class="stat">Deletes: <span id="delete-count">0</span></div>
+        </div>
+
+        <div id="card-container" class="card-grid">
+            <div class="card">
+                <h3>Post 1</h3>
+                <p>This is a sample post</p>
+                <div class="actions">
+                    <button class="btn-like">👍 Like</button>
+                    <button class="btn-edit">✏️ Edit</button>
+                    <button class="btn-delete">🗑️ Delete</button>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Post 2</h3>
+                <p>Another sample post</p>
+                <div class="actions">
+                    <button class="btn-like">👍 Like</button>
+                    <button class="btn-edit">✏️ Edit</button>
+                    <button class="btn-delete">🗑️ Delete</button>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Post 3</h3>
+                <p>Yet another post</p>
+                <div class="actions">
+                    <button class="btn-like">👍 Like</button>
+                    <button class="btn-edit">✏️ Edit</button>
+                    <button class="btn-delete">🗑️ Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

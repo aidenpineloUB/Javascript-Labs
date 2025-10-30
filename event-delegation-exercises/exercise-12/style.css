@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.instructions {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    border-left: 4px solid #fdcb6e;
+}
+
+.rating-items {
+    display: grid;
+    gap: 30px;
+}
+
+.rating-item {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.rating-item h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.stars {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.star {
+    color: #ddd;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.star:hover {
+    transform: scale(1.2);
+}
+
+.star.active {
+    color: #fdcb6e;
+}
+
+.star.hover {
+    color: #ffeaa7;
+}
+
+.rating-text {
+    font-size: 18px;
+    color: #666;
+}
+
+.rating-value {
+    font-weight: bold;
+    color: #fdcb6e;
+    font-size: 24px;
+}

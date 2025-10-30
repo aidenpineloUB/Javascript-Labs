@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 8: Tab Navigation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Exercise 8: Tab Navigation</h1>
+        <p class="instructions">
+            <strong>Goal:</strong> Switch between tabs using event delegation.<br>
+            Only ONE tab should be active at a time.
+        </p>
+        
+        <div class="tabs">
+            <div id="tab-buttons" class="tab-buttons">
+                <button class="tab-btn active" data-tab="home">Home</button>
+                <button class="tab-btn" data-tab="about">About</button>
+                <button class="tab-btn" data-tab="services">Services</button>
+                <button class="tab-btn" data-tab="contact">Contact</button>
+            </div>
+            
+            <div class="tab-content">
+                <div class="tab-pane active" data-tab="home">
+                    <h2>Home</h2>
+                    <p>Welcome to our homepage! This is where you'll find the latest updates and news.</p>
+                </div>
+                <div class="tab-pane" data-tab="about">
+                    <h2>About Us</h2>
+                    <p>Learn more about our company, our mission, and what we stand for.</p>
+                </div>
+                <div class="tab-pane" data-tab="services">
+                    <h2>Services</h2>
+                    <p>Explore the wide range of services we offer to our customers.</p>
+                </div>
+                <div class="tab-pane" data-tab="contact">
+                    <h2>Contact</h2>
+                    <p>Get in touch with us! We'd love to hear from you.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

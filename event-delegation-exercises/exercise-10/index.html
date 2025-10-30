@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 10: Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Exercise 10: Image Gallery</h1>
+        <p class="instructions">
+            <strong>Goal:</strong> Click thumbnails to change the main displayed image.<br>
+            Use event delegation to handle all thumbnail clicks.
+        </p>
+        
+        <div class="main-image">
+            <img id="featured-image" src="https://via.placeholder.com/600x400/667eea/ffffff?text=Image+1" alt="Featured">
+            <p id="image-caption">Image 1</p>
+        </div>
+
+        <div id="thumbnail-container" class="thumbnails">
+            <img class="thumbnail active" data-image="https://via.placeholder.com/600x400/667eea/ffffff?text=Image+1" data-caption="Image 1" src="https://via.placeholder.com/150/667eea/ffffff?text=1" alt="Thumbnail 1">
+            <img class="thumbnail" data-image="https://via.placeholder.com/600x400/f093fb/ffffff?text=Image+2" data-caption="Image 2" src="https://via.placeholder.com/150/f093fb/ffffff?text=2" alt="Thumbnail 2">
+            <img class="thumbnail" data-image="https://via.placeholder.com/600x400/4facfe/ffffff?text=Image+3" data-caption="Image 3" src="https://via.placeholder.com/150/4facfe/ffffff?text=3" alt="Thumbnail 3">
+            <img class="thumbnail" data-image="https://via.placeholder.com/600x400/00f2fe/ffffff?text=Image+4" data-caption="Image 4" src="https://via.placeholder.com/150/00f2fe/ffffff?text=4" alt="Thumbnail 4">
+            <img class="thumbnail" data-image="https://via.placeholder.com/600x400/43e97b/ffffff?text=Image+5" data-caption="Image 5" src="https://via.placeholder.com/150/43e97b/ffffff?text=5" alt="Thumbnail 5">
+            <img class="thumbnail" data-image="https://via.placeholder.com/600x400/fa709a/ffffff?text=Image+6" data-caption="Image 6" src="https://via.placeholder.com/150/fa709a/ffffff?text=6" alt="Thumbnail 6">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

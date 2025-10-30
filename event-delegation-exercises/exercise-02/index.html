@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2: Color Selector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Exercise 2: Color Selector</h1>
+        <p class="instructions">
+            <strong>Goal:</strong> Click on any color card to change the display box color.<br>
+            Use event delegation to handle all color card clicks with ONE listener.
+        </p>
+        
+        <div class="display-box" id="display-box">
+            <p>Click a color below!</p>
+        </div>
+
+        <div id="color-container" class="color-grid">
+            <div class="color-card" data-color="#FF6B6B">
+                <div class="color-preview" style="background: #FF6B6B;"></div>
+                <p>Red</p>
+            </div>
+            <div class="color-card" data-color="#4ECDC4">
+                <div class="color-preview" style="background: #4ECDC4;"></div>
+                <p>Teal</p>
+            </div>
+            <div class="color-card" data-color="#45B7D1">
+                <div class="color-preview" style="background: #45B7D1;"></div>
+                <p>Blue</p>
+            </div>
+            <div class="color-card" data-color="#FFA07A">
+                <div class="color-preview" style="background: #FFA07A;"></div>
+                <p>Orange</p>
+            </div>
+            <div class="color-card" data-color="#98D8C8">
+                <div class="color-preview" style="background: #98D8C8;"></div>
+                <p>Mint</p>
+            </div>
+            <div class="color-card" data-color="#F7DC6F">
+                <div class="color-preview" style="background: #F7DC6F;"></div>
+                <p>Yellow</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
